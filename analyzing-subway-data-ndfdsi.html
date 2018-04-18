@@ -11993,7 +11993,7 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -12073,7 +12073,7 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -12142,7 +12142,7 @@ Para isso crie uma coluna chamada de EXITSn_hourly e insira a diferença entre a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
@@ -12156,7 +12156,7 @@ Para isso crie uma coluna chamada de EXITSn_hourly e insira a diferença entre a
     <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;OLD_KEYS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;EXITS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">exits</span>
     <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;OLD_EXITS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">exits</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">exits_hourly</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;KEYS&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;OLD_KEYS&quot;</span><span class="p">],</span> <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;EXITS&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;OLD_EXITS&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">exits_hourly</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;KEYS&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;OLD_KEYS&quot;</span><span class="p">],</span> <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;EXITS&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;OLD_EXITS&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">exits_hourly</span>
 
 <span class="n">turnstile_data</span><span class="p">[</span><span class="s2">&quot;EXITS_hourly&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_hourly_exits</span><span class="p">(</span><span class="n">turnstile_data</span><span class="p">)</span>
@@ -12185,7 +12185,7 @@ Para isso crie uma coluna chamada de EXITSn_hourly e insira a diferença entre a
 4  A002  R051  02-00-00  05/27/2017  16:00:00  REGULAR  6195518  2098491   
 
    ENTRIES_hourly  EXITS_hourly  
-0             1.0           1.0  
+0             1.0           0.0  
 1            23.0           1.0  
 2            16.0          29.0  
 3            90.0          85.0  
@@ -12273,7 +12273,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -12347,12 +12347,13 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">num_rainy_days</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="n">rain</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;rain&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">rain</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">rainy</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;rain&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">groups</span> <span class="o">=</span> <span class="n">rainy</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;DATEn&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">groups</span><span class="p">)</span>
     
 <span class="n">rainy_days</span> <span class="o">=</span> <span class="n">num_rainy_days</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rainy_days</span><span class="p">)</span>
@@ -12372,7 +12373,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>44104
+<pre>10
 </pre>
 </div>
 </div>
@@ -12393,15 +12394,16 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="n">max_temp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;maxtempi&quot;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;fog&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>  
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">fog</span><span class="p">):</span>
+    <span class="n">max_temp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;maxtempi&quot;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;fog&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">fog</span><span class="p">]</span>  
     <span class="k">return</span> <span class="n">max_temp</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
     
-<span class="n">max_temp</span> <span class="o">=</span> <span class="n">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">max_temp</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12419,6 +12421,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>81.0
+86.0
 </pre>
 </div>
 </div>
@@ -12551,7 +12554,7 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -12566,8 +12569,8 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
     <span class="n">new_df</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5000</span><span class="p">))</span>
     <span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5000</span><span class="p">))</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Média de entradas em dias não chuvosos (</span><span class="si">{0}</span><span class="s2">): </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">not_rainy</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">not_rainy</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Média de entradas em dias chuvosos (</span><span class="si">{0}</span><span class="s2">): </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rainy</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">rainy</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Média de entradas em dias não chuvosos (</span><span class="si">{0}</span><span class="s2"> registros): </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">not_rainy</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">not_rainy</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Média de entradas em dias chuvosos (</span><span class="si">{0}</span><span class="s2"> registros): </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rainy</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">rainy</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
     
     <span class="k">return</span> <span class="n">plt</span>
 
@@ -12589,15 +12592,15 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Média de entradas em dias não chuvosos (87847): 1090.278780151855
-Média de entradas em dias chuvosos (44104): 1105.4463767458733
+<pre>Média de entradas em dias não chuvosos (87847 registros): 1090.278780151855
+Média de entradas em dias chuvosos (44104 registros): 1105.4463767458733
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[99]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
