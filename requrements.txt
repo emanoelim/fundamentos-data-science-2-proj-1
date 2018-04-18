@@ -1,0 +1,6 @@
+beautifulsoup4==4.6.0
+jupyter==1.0.0
+matplotlib==2.2.2
+numpy==1.14.2
+pandas==0.22.0
+pandasql==0.7.3
